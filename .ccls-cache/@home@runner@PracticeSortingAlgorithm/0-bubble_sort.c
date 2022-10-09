@@ -9,20 +9,15 @@ bubble_sort -  sorts an array of integers in ascending order using the Bubble so
 
 Return - Void
 */
-
-// void swap_pos(int *array)
-// {
-//   int temp = array[i]
-// }
 void bubble_sort(int *array, size_t size)
 {
   int swap = 1;
   int n = size;
   int i, j;
 
-  // while(swap)
-  //   {
-  //     swap = 0;
+  while(swap)
+    {
+      swap = 0;
 
       for(i = 0; i < n; i++)
         {
@@ -31,14 +26,11 @@ void bubble_sort(int *array, size_t size)
               if (array[j] > array[j + 1])
               {
                 int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-                // swap += 1;
-                print_array(array, size);
+                array[j + 1] = array[j];
+                array[j]
               }
             }
-          
         }
-    // }
+    }
   
 }
