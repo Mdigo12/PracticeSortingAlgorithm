@@ -10,35 +10,24 @@ bubble_sort -  sorts an array of integers in ascending order using the Bubble so
 Return - Void
 */
 
-// void swap_pos(int *array)
-// {
-//   int temp = array[i]
-// }
 void bubble_sort(int *array, size_t size)
 {
   int swap = 1;
   int n = size;
   int i, j;
 
-  // while(swap)
-  //   {
-  //     swap = 0;
-
-      for(i = 0; i < n; i++)
+  for(i = 0; i < n; i++)
+    {
+      for(j = 0; j < n - 1; j++)
         {
-          for(j = 0; j < n - 1; j++)
-            {
-              if (array[j] > array[j + 1])
-              {
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-                // swap += 1;
-                print_array(array, size);
-              }
-            }
-          
+          if (array[j] > array[j + 1])
+          {
+            int temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+            print_array(array, size);
+          }
         }
-    // }
-  
+      
+    }  
 }
