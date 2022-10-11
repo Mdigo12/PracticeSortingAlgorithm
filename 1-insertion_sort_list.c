@@ -26,8 +26,8 @@ void insertion_sort_list(listint_t **list)
 
           //link the nodes immediately before and after our current node
           if(curr->next != NULL) //if not the last node
-            (curr->next)->prev = temp->prev;
-          (curr->prev)->next = temp->next;
+            (curr->next)->prev = curr->prev;
+          (curr->prev)->next = curr->next;
           //prev node and next nodes linked
           
           curr = curr->prev;//substitute the current node with the previous node
@@ -40,7 +40,7 @@ void insertion_sort_list(listint_t **list)
             (curr->prev)->next = temp;
           curr->prev = temp;
 
-          if(temp->prev == NULL)
+          if(temp->prev == NULL)// 
             *list = temp;
           print_list(*list);
           curr = curr->prev;
